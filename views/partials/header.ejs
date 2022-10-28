@@ -10,8 +10,15 @@
 <body>
   
   <nav>
-    <a href="/">HOME</a> | 
-    <a href="/">MY PLAYLIST</a>
+    <nav>
+        <a href="/views/index.ejs" <%- title === 'Playlist' ? 'class="active"' : '' %>>PLAYLIST(S)</a>
+        <% if (user) { %>
+          <a href="/views/index.ejs"    <%- title === 'Add Song' ? 'class="active"' : '' %>>
+              ADD A SONG</a>
+          <a href="/logout">LOG OUT</a>
+        <% } else { %>
+          <a href="/auth/google" class="login">LOG IN <img src="https://i.imgur.com/FHjYyi0.png"></a>
+        <% } %>
+      </nav>
   </nav>
   <main>
-    <h1><%= title %></h1>
