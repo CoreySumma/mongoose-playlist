@@ -4,21 +4,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mongoose Playlist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
   <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>Mongoose Playlist</title>
 </head>
 <body>
-  
-  <nav>
+    <main>
+
     <nav>
-        <a href="/views/index.ejs" <%- title === 'Playlist' ? 'class="active"' : '' %>>PLAYLIST(S)</a>
         <% if (user) { %>
-          <a href="/views/index.ejs"    <%- title === 'Add Song' ? 'class="active"' : '' %>>
+          <a href="/playlists" <%- title === 'Playlist' ? 'class="active"' : '' %>>PLAYLIST(S)</a>
+          <a href="/songs/new"    <%- title === 'Add Song' ? 'class="active"' : '' %>>
               ADD A SONG</a>
           <a href="/logout">LOG OUT</a>
         <% } else { %>
           <a href="/auth/google" class="login">LOG IN <img src="https://i.imgur.com/FHjYyi0.png"></a>
         <% } %>
       </nav>
-  </nav>
-  <main>
+ 

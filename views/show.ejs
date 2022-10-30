@@ -1,0 +1,31 @@
+<%- include('./partials/header') %>
+
+<h1>Playlist</h1>
+<section id="show-page">
+    <div>Title: </div>
+    <div><%= song.title %></div>
+    <div>Artist: </div>
+    <div><%= song.artist %></div>
+    <div>Album:</div>
+    <div><%= song.album %></div>
+    <div>Link:</div>
+    <div><%= song.link %></div>
+
+<br><br><h2>Reviews</h2>
+    <% if (user) { %>
+      <form id="add-review-form" method="POST"
+        action="/playlist/<%= playlist._id %>/reviews">
+        <label>Review:</label>
+        <textarea name="content"></textarea>
+        <label>Rating:</label>
+        <select name="rating">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5" selected>5</option>
+        </select>
+          <input type="submit" value="Add Review">
+      </form>
+    <% } %>
+<%- include('./partials/footer') %>

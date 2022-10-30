@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+
+<table id="list">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Artist</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% playlists.forEach(function(s) { %>
+      <tr>
+        <td><%= s.title %></td>
+        <td><%= s.artist %></td>
+        <td><a href="/playlists/<%= s._id %>">SOMETHING</a></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+<%- include('../partials/footer') %>
