@@ -24,15 +24,37 @@ const reviewSchema = new Schema({
   timestamps: true
 });
 
+const songSchema = new Schema({
+  title: {
+    type: String,
+    required: true
+  },
+  artist: {
+    type: String,
+    required: true
+  },
+  album: {
+    type: String,
+    required: true
+  },
+  link: {
+    type: String,
+    required: true
+  },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+  }
+}, {
+    timestamps: true
+});
+
 const playlistSchema = new Schema({
   name: {
     type: String,
     required: true
   },
-  songs: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Song'
-  }],
+  songs: [songSchema],
   reviews: [reviewSchema]
 });
 

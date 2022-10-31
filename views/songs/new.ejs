@@ -1,15 +1,16 @@
-<%- include('./partials/header') %>
+<%- include('../partials/header') %>
 
 <h1>add a song via a form here</h1>
 
-form id="new-form" action="/movies" method="POST">
+<form id="new-form" action="/playlists/<%= playlist %>/songs" method="POST">
   <label>Title:</label>
   <input type="text" name="title">
   <label>Artist:</label>
   <input type="text" name="artist">
   <label>Album</label>
-  <input type="text" name="artist">
+  <input type="text" name="album">
+  <input type="text" name="link">
   <input type="submit" value="Add Song">
 </form>
 
-<%- include('./partials/footer') %>
+<%- include('../partials/footer') %>

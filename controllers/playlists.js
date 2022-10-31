@@ -1,10 +1,10 @@
 const Playlist = require('../models/playlist');
-const Song = require('../models/song');
 
 module.exports = {
   index,
   new: newPlaylist,
-  create
+  create,
+  show
 };
 
 function index(req, res) {
@@ -12,6 +12,20 @@ function index(req, res) {
         res.render('playlists/index', {title: 'All Playlists', playlists});
     });
 };
+
+function show(req,res) {
+  Playlist.findById(req.params.id)
+  .populate('songs')
+  .exec(function(err, playlist) {
+        res.render('playlists/show', {
+          title: 'Songs',
+          playlist
+        });
+      }
+
+    );
+  };
+
 
 function newPlaylist(req, res) {
   res.render('playlists/new', { title: 'Add Playlist' });
