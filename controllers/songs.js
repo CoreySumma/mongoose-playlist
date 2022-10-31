@@ -1,34 +1,17 @@
-// const Song = require('../models/song');
-// const Playlist = require('../models/playlist');
+const Song = require('../models/song');
+const Playlist = require('../models/playlist');
 
-// module.exports = {
-//     new: newSong,
-//     create,
-//     addToPlaylist
-// }
+module.exports = {
+    new: newSong
+};
 
-// function addToPlaylist(req, res) {
-//   Playlist.findById(req.params.id, function(err, song) {
-//     playlist.song.push(req.body.songId);
-//     song.save(function(err) {
-//         res.redirect(`/playlists/${playlist._id}`);
-//     });
-//   });
-// }
-
-// function create(req, res) {
-//     Song.create(req.body, function(err, song) {
-//         res.redirect('/song/new');
-//     })
-// }
-
-// function newSong(req, res) {
-//     Song.find({})
-//     .sort('title')
-//     .exec(function(err, songs) {
-//         res.render('songs/new', {
-//             title: 'Add Song',
-//             songs
-//         });
-//     });
-// }
+function newSong(req, res) {
+  Song.find({})
+  .sort('name')
+  .execute(function(err, songs) {
+    res.render('songs/new'), {
+        title: 'Add Song',
+        songs
+    }
+  });
+};

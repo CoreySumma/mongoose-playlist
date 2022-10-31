@@ -14,10 +14,12 @@
     <main>
 
     <nav>
+      <a href="/" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a> |
+      <a href="/playlists" <%- title === 'Playlist' ? 'class="active"' : '' %>>PLAYLIST(S)</a> |
         <% if (user) { %>
-          <a href="/playlists" <%- title === 'Playlist' ? 'class="active"' : '' %>>PLAYLIST(S)</a>
-          <a href="/songs/new"    <%- title === 'Add Song' ? 'class="active"' : '' %>>
-              ADD A SONG</a>
+          <a href="/playlists/new" <%- title === 'Add Playlist' ? 'class="active"' : '' %>>ADD PLAYLIST</a> | 
+          <a href="/songs/new"    <%- title === 'Add Song' ? 'class="active"' : '' %>> 
+              ADD A SONG</a> |
           <a href="/logout">LOG OUT</a>
         <% } else { %>
           <a href="/auth/google" class="login">LOG IN <img src="https://i.imgur.com/FHjYyi0.png"></a>
