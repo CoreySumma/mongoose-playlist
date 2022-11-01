@@ -4,11 +4,14 @@
   <div>Name: </div>
   <div><%= playlist.name %></div>
   <div><%= playlist.song %></div>
-  <div>Rating: </div>
-  <div><%= playlist.rating %></div>
+  <!-- <div>Rating: </div>
+  <div><%= playlist.rating %></div> -->
   <a href="/playlists/<%= playlist._id %>/songs/new" <%- title === 'Add Song' ? 'class="active"' : '' %>> 
     ADD A SONG</a> 
   <% playlist.songs.forEach(function(s) { %>
     <%- s.link %>
+    <form action="/playlists/<%= playlist._id %>/songs/<%= s._id %>?_method=DELETE" method="POST" >
+        <button type="submit">Remove this song</button>
+    </form>
 <% }) %>
 <%- include('../partials/footer') %>

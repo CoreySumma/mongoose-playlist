@@ -3,15 +3,17 @@
 <table id="list">
   <thead>
     <tr>
-      <th>Name</th>
+      <th></th>
+      <th>Playlist(s)</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     <% playlists.forEach(function(p) { %>
       <tr>
+        <td><a href="/playlists/<%= p._id %>/edit">Edit</a></td>
         <td><%= p.name %></td>
-        <td><a href="/playlists/<%= p._id %>">SHOW</a></td>
+        <td><a href="/playlists/<%= p._id %>">Listen</a></td>
       </tr>
       <% }); %>
     </tbody>

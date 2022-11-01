@@ -4,13 +4,17 @@ const playlistsCtrl = require('../controllers/playlists')
 const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 // GET display all songs
-router.get('/', playlistsCtrl.index);
-// GET /playlists/new (display for for new playlist)
+router.get('/', ensureLoggedIn, playlistsCtrl.index);
+// GET /playlists/new (display form for new playlist)
 router.get('/new', ensureLoggedIn, playlistsCtrl.new);
 // GET /playlists/:id (display show page for current songs/add song/add review buttons)
-router.get('/:id', playlistsCtrl.show)
+router.get('/:id', ensureLoggedIn, playlistsCtrl.show)
 // POST /playlists (handles submission for a new playlist and posts it)
 router.post('/', ensureLoggedIn, playlistsCtrl.create);
+// GET /playlists/:id/edit (edit playlist name)
+router.get('/:id/edit', ensureLoggedIn, playlistsCtrl.edit);
+// PUT /playlists/:id (update playlist name)
+router.put('/:id', ensureLoggedIn, playlistsCtrl.update);
 
 module.exports = router;
 

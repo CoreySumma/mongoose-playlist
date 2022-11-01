@@ -5,7 +5,7 @@ const passport = require('passport');
 // This app has no "home" page, 
 // but your projects should 😀
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Collab Playlist' });
+  res.render('index', { title: 'SpotLabs' });
 });
 
 router.get('/auth/google', passport.authenticate(

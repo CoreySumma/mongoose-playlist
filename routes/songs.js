@@ -7,4 +7,7 @@ router.get('/playlists/:id/songs/new', ensureLoggedIn, songsCtrl.new);
 
 router.post('/playlists/:id/songs', ensureLoggedIn, songsCtrl.create);
 
+router.delete('/playlists/:id/songs/:id', ensureLoggedIn, songsCtrl.delete);
+
 module.exports = router;
+

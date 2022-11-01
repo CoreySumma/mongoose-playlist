@@ -4,11 +4,35 @@ module.exports = {
   index,
   new: newPlaylist,
   create,
-  show
+  show,
+  edit,
+  update
+};
+
+function update(req, res) {
+  console.log(req.body);
+  Playlist.findOneAndUpdate(
+    {_id: req.params.id},
+    req.body,
+    {new: true},
+    function(err, playlist) {
+      if (err || !playlist) return res.redirect('/playlists');
+      res.redirect(`/playlists/${playlist._id}`);
+    }
+  );
+}
+
+function edit(req, res) {     
+  Playlist.findById(req.params.id, (err, playlist) => {
+    res.render('playlists/edit', {
+      title: 'New Vibe',
+      playlist
+    });
+  });
 };
 
 function index(req, res) {
-    Playlist.find({}, function(err, playlists) {
+    Playlist.find({}, (err, playlists) => {
         res.render('playlists/index', {title: 'All Playlists', playlists});
     });
 };
@@ -38,7 +62,7 @@ function create(req, res) {
   //   if (req.body[key] === '') delete req.body[key];
   // }
   const playlist = new Playlist(req.body);
-  playlist.save(function(err) {
+  playlist.save((err) => {
     if (err) return res.redirect('/playlists/new');
     res.redirect(`/playlists/${playlists._id}`);
   })
