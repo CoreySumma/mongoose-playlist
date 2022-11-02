@@ -2,16 +2,17 @@
 
 <section id="show-page">
   <!-- <div>Name: </div> -->
-  <div><%= playlist.name %></div>
+  <div><h1><%= playlist.name %></h1></div>
   <div><%= playlist.song %></div>
   <!-- <div>Rating: </div>
   <div><%= playlist.rating %></div> -->
-  <a href="/playlists/<%= playlist._id %>/songs/new" <%- title === 'Add Song' ? 'class="active"' : '' %>> 
-    ADD A SONG</a> 
+    <form action="/playlists/<%= playlist._id %>/songs/new %>">
+      <button class="style-button" type="submit">ADD SONG</button>
   <% playlist.songs.forEach(function(s) { %>
     <%- s.link %>
+    <img class="user-image" alt="avatar" src="<%= s.userAvatar %>" referrerpolicy="no-referrer">
     <form action="/playlists/<%= playlist._id %>/songs/<%= s._id %>?_method=DELETE" method="POST" >
-        <button type="submit">Remove this song</button>
+        <button class="style-button" type="submit">REMOVE THIS SONG</button>
     </form>
 <% }) %>
 <%- include('../partials/footer') %>

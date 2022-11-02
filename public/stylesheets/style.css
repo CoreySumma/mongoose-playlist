@@ -94,6 +94,11 @@ body > main {
   overflow-y: scroll;
 }
 
+/* .video-size {
+  height: 15vmin;
+  width: 100%;
+} */
+
 body > main h1:first-child {
   margin-bottom: 50px;
 }
@@ -129,8 +134,12 @@ nav > a.active {
   display: flex;
   flex-direction: column;
   justify-items:center;
+  align-items: center;
   margin-top: .5fr;
-  
+}
+
+.center { 
+  text-align: center;
 }
 
 #new-form * {
@@ -165,11 +174,26 @@ table td {
 
 #list a {
   color: white;
-  border-radius: 30%;
   background-color: black;
   padding: 20px;
   text-decoration: none;
   font-size: 20px;
+}
+
+.style-button {
+  margin: 1vmin auto 1vmin auto;
+  color: white;
+  background-color: black;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Gemunu Libre', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.style-button:hover {
+  background-color: rgb(40 202 90);
 }
 
 #list a:hover {
@@ -247,14 +271,16 @@ li {
 .login img {
   height: 30px;
 }
-/* 
+
 .review-user {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.review-user img {
+.user-image {
   border-radius: 50%;
   height: 40px;
-} */
+  display: block;
+
+} 
