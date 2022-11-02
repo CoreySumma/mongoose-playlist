@@ -12,11 +12,15 @@
     <% playlists.forEach(function(p) { %>
       <tr>
         <td><a href="/playlists/<%= p._id %>/edit">Edit</a></td>
+      </div>
         <td><%= p.name %></td>
         <td><a href="/playlists/<%= p._id %>">Listen</a></td>
       </tr>
       <% }); %>
     </tbody>
   </table>
+  <img src="/images/headphones.png" >
+
+ 
   
 <%- include('../partials/footer') %>

@@ -45,7 +45,7 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Dosis', sans-serif;
-  font-size: 80px;
+  font-size: 10vmin;
 }
 
 body {
@@ -54,7 +54,7 @@ body {
   margin: 0;
   height: 100vh;
   display: grid;
-  grid-template-rows: 50px 1fr;
+  grid-template-rows: 8vmin 1fr;
   grid-template-areas: 
     "nav"
     "main"
@@ -74,7 +74,7 @@ body > nav {
 }
 
 nav > img {
-  width: 34px;
+  width: 8vmin;
   object-fit: contain;
   margin-right: auto;
 }
@@ -98,6 +98,13 @@ body > main h1:first-child {
   margin-bottom: 50px;
 }
 
+main > img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: .8;
+}
+
 nav > a {
   color: black;
   margin: 20px;
@@ -108,7 +115,7 @@ nav > a {
 
 nav > a:hover:not(.active) {
   color: white;
-  background-color: rgb(40 202 90);
+  background-color: black;
 }
 
 nav > a.active {
@@ -116,9 +123,14 @@ nav > a.active {
 }
 
 #new-form {
-  display: grid;
+  /* display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(2, minmax(auto, 22rem));
+  grid-template-columns: repeat(2, minmax(auto, 22rem)); */
+  display: flex;
+  flex-direction: column;
+  justify-items:center;
+  margin-top: .5fr;
+  
 }
 
 #new-form * {
@@ -153,11 +165,11 @@ table td {
 
 #list a {
   color: white;
-  border-radius: 50%;
+  border-radius: 30%;
   background-color: black;
-  padding: 30px;
+  padding: 20px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 #list a:hover {
@@ -166,8 +178,12 @@ table td {
 
 #show-page {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   grid-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
 }
 
 #show-page div:nth-child(even) {
