@@ -1,5 +1,5 @@
 # <Mongoose-Playlist>
-# <ins>SpotLab</ins>
+# <ins>SpotLabs</ins>
 
 A spotify collaborative playlist that allows signed in users to create playlists with their friends and family!  Users can add/remove songs and listen directly via the UI.
 
