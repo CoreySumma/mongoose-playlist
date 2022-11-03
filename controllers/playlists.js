@@ -12,17 +12,17 @@ module.exports = {
 function update(req, res) {
   console.log(req.body);
   Playlist.findOneAndUpdate(
-    {_id: req.params.id},
+    { _id: req.params.id },
     req.body,
-    {new: true},
-    function(err, playlist) {
+    { new: true },
+    function (err, playlist) {
       if (err || !playlist) return res.redirect('/playlists');
       res.redirect(`/playlists/${playlist._id}`);
     }
   );
 }
 
-function edit(req, res) {     
+function edit(req, res) {
   Playlist.findById(req.params.id, (err, playlist) => {
     res.render('playlists/edit', {
       title: 'New Vibe',
@@ -32,23 +32,23 @@ function edit(req, res) {
 };
 
 function index(req, res) {
-    Playlist.find({}, (err, playlists) => {
-        res.render('playlists/index', {title: 'All Playlists', playlists});
-    });
+  Playlist.find({}, (err, playlists) => {
+    res.render('playlists/index', { title: 'All Playlists', playlists });
+  });
 };
 
-function show(req,res) {
+function show(req, res) {
   Playlist.findById(req.params.id)
-  .populate('songs')
-  .exec(function(err, playlist) {
-        res.render('playlists/show', {
-          title: 'Songs',
-          playlist
-        });
-      }
+    .populate('songs')
+    .exec(function (err, playlist) {
+      res.render('playlists/show', {
+        title: 'Songs',
+        playlist
+      });
+    }
 
     );
-  };
+};
 
 
 function newPlaylist(req, res) {
@@ -64,8 +64,9 @@ function create(req, res) {
   const playlist = new Playlist(req.body);
   playlist.save((err) => {
     if (err) return res.redirect('/playlists/new');
-    res.redirect(`/playlists/${playlists._id}`);
+    res.redirect(`/playlists/${playlist._id}`);
   })
 };
+
 
 

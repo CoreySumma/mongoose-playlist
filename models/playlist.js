@@ -35,7 +35,6 @@ const songSchema = new Schema({
   },
   album: {
     type: String,
-    required: true
   },
   link: {
     type: String,
@@ -48,7 +47,7 @@ const songSchema = new Schema({
   userName: String,
   userAvatar: String
 }, {
-    timestamps: true
+  timestamps: true
 });
 
 const playlistSchema = new Schema({
@@ -61,3 +60,4 @@ const playlistSchema = new Schema({
 });
 
 module.exports = mongoose.model('Playlist', playlistSchema);
+

@@ -1,18 +1,25 @@
 <%- include('../partials/header') %>
 
-<section id="show-page">
-  <!-- <div>Name: </div> -->
-  <div><h1><%= playlist.name %></h1></div>
-  <div><%= playlist.song %></div>
-  <!-- <div>Rating: </div>
+  <section id="show-page">
+    <!-- <div>Name: </div> -->
+    <div>
+      <h1>
+        <%= playlist.name %>
+      </h1>
+    </div>
+    <div>
+      <%= playlist.song %>
+    </div>
+    <!-- <div>Rating: </div>
   <div><%= playlist.rating %></div> -->
     <form action="/playlists/<%= playlist._id %>/songs/new %>">
       <button class="style-button" type="submit">ADD SONG</button>
-  <% playlist.songs.forEach(function(s) { %>
-    <%- s.link %>
-    <img class="user-image" alt="avatar" src="<%= s.userAvatar %>" referrerpolicy="no-referrer">
-    <form action="/playlists/<%= playlist._id %>/songs/<%= s._id %>?_method=DELETE" method="POST" >
-        <button class="style-button" type="submit">REMOVE THIS SONG</button>
     </form>
-<% }) %>
-<%- include('../partials/footer') %>
+    <% playlist.songs.forEach(function(s) { %>
+      <img class="user-image" alt="avatar" src="<%= s.userAvatar %>" referrerpolicy="no-referrer">
+      <%- s.link %>
+        <form action="/playlists/<%= playlist._id %>/songs/<%= s._id %>?_method=DELETE" method="POST">
+          <button class="style-button" type="submit">REMOVE THIS SONG</button>
+        </form>
+        <% }) %>
+          <%- include('../partials/footer') %>

@@ -8,7 +8,7 @@
     <% playlists.forEach(function(p) { %>
       <tr>
         <td><a href="/playlists/<%= p._id %>/edit">EDIT</a></td>
-        <td><%= p.name %></td>
+        <td><p> <%= p.name %> </p></td>
         <td><a href="/playlists/<%= p._id %>">LISTEN</a></td>
       </tr>
       <% }); %>

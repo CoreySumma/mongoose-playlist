@@ -26,7 +26,7 @@ const songSchema = new Schema({
   userName: String,
   userAvatar: String
 }, {
-    timestamps: true
+  timestamps: true
 });
 
 module.exports = mongoose.model('Song', songSchema);

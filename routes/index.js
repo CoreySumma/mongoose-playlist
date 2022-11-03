@@ -4,7 +4,7 @@ const passport = require('passport');
 
 // This app has no "home" page, 
 // but your projects should 😀
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
   res.render('index', { title: 'SpotLabs' });
 });
 
@@ -27,8 +27,8 @@ router.get('/oauth2callback', passport.authenticate(
   }
 ));
 
-router.get('/logout', function(req, res) {
-  req.logout(function() {
+router.get('/logout', function (req, res) {
+  req.logout(function () {
     // Change path for your "landing" page
     res.redirect('/');
   });
