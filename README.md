@@ -31,7 +31,7 @@ A spotify collaborative playlist that allows signed in users to create playlists
   
   3.) Click on the "LISTEN" button to enter that playlist<br>
   
-  4.) Add/remove/listen to songs freely by copying the embedded/pasting the embedded         Spotify link<br>
+  4.) Add/remove/listen to songs freely by copying/pasting the embedded Spotify link<br>
   
   5.) Share your link with friends/family and collabate on your playlists!<br>
   
