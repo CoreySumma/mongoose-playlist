@@ -42,5 +42,4 @@ A spotify collaborative playlist that allows signed in users to create playlists
   - Randomly generate the beginning of a playlist on us!
   - Add reviews for each Playlist
   - Remove Playlists
-  - Insert Spotify API
-  - 
+  - Use Spotifys API
