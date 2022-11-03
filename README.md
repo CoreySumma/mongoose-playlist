@@ -5,15 +5,15 @@ A spotify collaborative playlist that allows signed in users to create playlists
 
 # Screen Shots:
 
-  <img width="1440" alt="Screen Shot 2022-11-03 at 5 36 39 PM" src="https://user-images.githubusercontent.com/66542022/199841714-4ccf8296-60a7-46db-b8ec-db915f0ed818.png">
+<img width="1440" alt="Screen Shot 2022-11-03 at 6 06 03 PM" src="https://user-images.githubusercontent.com/66542022/199843783-95a3f8d6-4f7c-4f2b-95f3-b3a143cf7d6a.png">
 
-  <img width="1440" alt="Screen Shot 2022-11-03 at 5 36 43 PM" src="https://user-images.githubusercontent.com/66542022/199841764-28340c25-771a-4df3-b069-41dcb36a9460.png">
+<img width="1440" alt="Screen Shot 2022-11-03 at 6 07 45 PM" src="https://user-images.githubusercontent.com/66542022/199843792-1e688bd5-a805-4b74-af2a-dc477b674e35.png">
 
-  <img width="1440" alt="Screen Shot 2022-11-03 at 5 36 55 PM" src="https://user-images.githubusercontent.com/66542022/199841782-b65e9141-a329-4c28-871b-062d7a9d4206.png">
+<img width="1440" alt="Screen Shot 2022-11-03 at 6 08 03 PM" src="https://user-images.githubusercontent.com/66542022/199843802-475620c4-5d2d-472d-a1be-87be2f82fef4.png">
 
-  <img width="1440" alt="Screen Shot 2022-11-03 at 5 36 58 PM" src="https://user-images.githubusercontent.com/66542022/199841831-6fbba444-8611-4921-9542-577ce380e708.png">
+<img width="1436" alt="Screen Shot 2022-11-03 at 6 08 12 PM" src="https://user-images.githubusercontent.com/66542022/199843809-3f988780-918e-484e-b98e-141453960288.png">
 
-# Technology Used:
+ # Technology Used:
 
   - Javascript
   - HTML
@@ -31,7 +31,7 @@ A spotify collaborative playlist that allows signed in users to create playlists
   
   3.) Click on the "LISTEN" button to enter that playlist<br>
   
-  4.) Add/remove/listen to songs freely by copying the embedded/pasting the embedded Spotify link<br>
+  4.) Add/remove/listen to songs freely by copying the embedded/pasting the embedded         Spotify link<br>
   
   5.) Share your link with friends/family and collabate on your playlists!<br>
   
