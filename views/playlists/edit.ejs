@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
 
     <form action="/playlists/<%= playlist._id %>?_method=PUT" method="POST">
-    <input type="text" name="name" value= "<%= playlist.name %>">
-    <button type="submit" value="Update Playlist">Update</button>
+        <input type="text" name="name" value="<%= playlist.name %>">
+        <button type="submit" value="Update Playlist">Update</button>
     </form>
-    
-<%- include('../partials/footer') %>
+
+    <%- include('../partials/footer') %>

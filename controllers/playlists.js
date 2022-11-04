@@ -10,7 +10,6 @@ module.exports = {
 };
 
 function update(req, res) {
-  console.log(req.body);
   Playlist.findOneAndUpdate(
     { _id: req.params.id },
     req.body,
@@ -20,7 +19,7 @@ function update(req, res) {
       res.redirect(`/playlists/${playlist._id}`);
     }
   );
-}
+};
 
 function edit(req, res) {
   Playlist.findById(req.params.id, (err, playlist) => {
@@ -56,16 +55,11 @@ function newPlaylist(req, res) {
 };
 
 function create(req, res) {
-  // req.body.playlist = req.body.playlist.trim();
-  // if(req.body.playlist) req.body.playlist = req.body.playlist.split(/\s*,\s*/);
-  // for (let key in req.body) {
-  //   if (req.body[key] === '') delete req.body[key];
-  // }
   const playlist = new Playlist(req.body);
   playlist.save((err) => {
     if (err) return res.redirect('/playlists/new');
     res.redirect(`/playlists/${playlist._id}`);
-  })
+  });
 };
 
 

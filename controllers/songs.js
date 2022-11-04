@@ -23,7 +23,7 @@ function deleteSong(req, res, next) {
 function create(req, res) {
   Playlist.findById(req.params.id, (err, playlist) => {
     req.body.user = req.user._id;
-    req.body.userAvatar = req.user.avatar; // Added This
+    req.body.userAvatar = req.user.avatar;
     playlist.songs.push(req.body);
     playlist.save((err) => {
       console.log(err);

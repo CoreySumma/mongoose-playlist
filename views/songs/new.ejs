@@ -1,20 +1,20 @@
 <%- include('../partials/header') %>
 
-<h1>Contribute</h1>
-<div class="video-size">
-<embed src="/videos/howto.gif" loop=true> </embed>
-</div>
-<form id="new-form" action="/playlists/<%= playlist %>/songs" method="POST">
-  <label>Title:</label>
-  <input type="text" name="title">
-  <label>Artist:</label>
-  <input type="text" name="artist">
-  <label>Album:</label>
-  <input type="text" name="album">
-  <label>Embedded Link:</label>
-  <input type="text" name="link">
-  <div class="center"><input type="submit" class="style-button" value="Add Song"></div>
-</form>
+  <h1>Contribute</h1>
+  <div class="video-size">
+    <embed src="/videos/howto.gif" loop=true> </embed>
+  </div>
+  <form id="new-form" action="/playlists/<%= playlist %>/songs" method="POST">
+    <label>Title:</label>
+    <input type="text" name="title">
+    <label>Artist:</label>
+    <input type="text" name="artist">
+    <label>Album:</label>
+    <input type="text" name="album">
+    <label>Embedded Link:</label>
+    <input type="text" name="link">
+    <div class="center"><input type="submit" class="style-button" value="Add Song"></div>
+  </form>
 
 
-<%- include('../partials/footer') %>
+  <%- include('../partials/footer') %>

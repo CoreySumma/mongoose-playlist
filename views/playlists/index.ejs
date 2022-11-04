@@ -1,21 +1,25 @@
 <%- include('../partials/header') %>
 
-<table id="list">
-  <thead>
-    <h1>Playlist(s)</h1>
-  </thead>
-  <tbody>
-    <% playlists.forEach(function(p) { %>
-      <tr>
-        <td><a href="/playlists/<%= p._id %>/edit">EDIT</a></td>
-        <td><p> <%= p.name %> </p></td>
-        <td><a href="/playlists/<%= p._id %>">LISTEN</a></td>
-      </tr>
-      <% }); %>
+  <table id="list">
+    <thead>
+      <h1>Playlist(s)</h1>
+    </thead>
+    <tbody>
+      <% playlists.forEach(function(p) { %>
+        <tr>
+          <td><a href="/playlists/<%= p._id %>/edit">EDIT</a></td>
+          <td>
+            <p>
+              <%= p.name %>
+            </p>
+          </td>
+          <td><a href="/playlists/<%= p._id %>">LISTEN</a></td>
+        </tr>
+        <% }); %>
     </tbody>
   </table>
-  <img src="/images/headphones.png" >
+  <img src="/images/headphones.png">
 
- 
-  
-<%- include('../partials/footer') %>
+
+
+  <%- include('../partials/footer') %>

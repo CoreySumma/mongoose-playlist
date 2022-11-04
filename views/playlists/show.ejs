@@ -1,7 +1,6 @@
 <%- include('../partials/header') %>
 
   <section id="show-page">
-    <!-- <div>Name: </div> -->
     <div>
       <h1>
         <%= playlist.name %>
@@ -10,8 +9,6 @@
     <div>
       <%= playlist.song %>
     </div>
-    <!-- <div>Rating: </div>
-  <div><%= playlist.rating %></div> -->
     <form action="/playlists/<%= playlist._id %>/songs/new %>">
       <button class="style-button" type="submit">ADD SONG</button>
     </form>
