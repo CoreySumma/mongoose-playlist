@@ -35,6 +35,8 @@ A spotify collaborative playlist that allows signed in users to create playlists
   
   5.) Share your link with friends/family and collabate on your playlists!<br>
   
+  [Click here to see app planning](https://trello.com/b/C5a5i6IR/project-2)
+  
   [Click here to start listening!](https://mongoose-playlist-926.herokuapp.com/)
   
   # Next Steps
