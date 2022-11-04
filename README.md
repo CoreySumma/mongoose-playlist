@@ -22,6 +22,7 @@ A spotify collaborative playlist that allows signed in users to create playlists
   - Express
   - MongoDb
   - Mongoose
+  - Google Oauth
   
   Getting Started:
   
